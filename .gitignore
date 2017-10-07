@@ -1,0 +1,10 @@
+node_modules/
+.expo/
+npm-debug.*
+.psci_modules
+bower_components
+
+# Generated files
+.psci
+output
+/index.js

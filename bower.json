@@ -1,0 +1,19 @@
+{
+  "name": "skeleton-app",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^3.1.0",
+    "purescript-console": "^3.0.0",
+    "purescript-dispatcher-react": "^2.0.0",
+    "purescript-reactnative": "^4.0.1",
+    "purescript-argonaut-codecs": "^3.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^3.0.0"
+  }
+}
