@@ -1,3 +1,7 @@
+# Purescript ReactNative Skeleton app for use in Expo
+
+![screenshot for iOS Expo](screenshot_ios_resized.jpg)
+
 # Pre-requisites
 
 0. npm version < 5.
