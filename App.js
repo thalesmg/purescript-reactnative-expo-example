@@ -1,2 +1,2 @@
-const Main = require('./index');
+const Main = require("./index");
 export default Main.app;

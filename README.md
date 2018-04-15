@@ -4,10 +4,13 @@
 
 # Pre-requisites
 
-0. npm version < 5.
+0. npm version ~ 5.8.0.
 1. `npm install -g bower pulp create-react-native-app`
+   * pulp 12.0.1
+   * purescript 0.11.7
+   * bower 1.8.4
+   * yarn 1.6.0
 2. [entr](http://entrproject.org/).
-3. yarn.
 
 # Creating a skeleton Purescript ReactNative app
 
@@ -23,11 +26,11 @@
     "output"
   ],
   "dependencies": {
-    "purescript-prelude": "^3.1.0",
+    "purescript-prelude": "^3.2.0",
     "purescript-console": "^3.0.0",
-    "purescript-dispatcher-react": "^2.0.0",
-    "purescript-reactnative": "^4.0.1",
-    "purescript-argonaut-codecs": "^3.0.0"
+    "purescript-dispatcher-react": "^3.1.0",
+    "purescript-reactnative": "^5.0.0",
+    "purescript-argonaut-codecs": "^3.2.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^3.0.0"
@@ -35,33 +38,7 @@
 }
 ```
 3. `bower install` .
-4. Create `src/Main.purs` and add this to its contents:
-
-```purescript
-module Main where
-
-import Prelude
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Console (CONSOLE, log)
-import React (ReactClass, spec, getProps, createClass, Render)
-import ReactNative.API (REGISTER, registerComponent)
-import ReactNative.Components.Text (text)
-import ReactNative.Components.View (view)
-import ReactNative.PropTypes.Color (orange)
-import ReactNative.Styles (backgroundColor, flex, staticStyles, height)
-
-render :: forall props state eff. Render props state eff
-render ctx = do
-  _ <- getProps ctx
-  pure (view (staticStyles [flex 10, height 10])
-        [ text (staticStyles [flex 10]) "\n\nHello World!!!!"
-        , text (staticStyles [backgroundColor orange]) "Footnote!"
-        ])
-
-app :: forall p. ReactClass p
-app = createClass $ spec {style: staticStyles [flex 1]} render
-```
-
+4. Create `src/Main.purs` and copy the contents from the file in this repo. Also, copy the image, `src/Images.purs`, `src/Images.js` if you want more than text.
 5. Substitute the contents of `App.js` for this:
 
 ```node
